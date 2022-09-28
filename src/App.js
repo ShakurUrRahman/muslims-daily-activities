@@ -21,7 +21,7 @@ function App() {
     }, [])
 
     const handleAddToList = (activity) => {
-      console.log(activity);
+      // console.log(activity);
       const newTimes = [...times, activity];
       setTimes(newTimes);
     }
@@ -41,7 +41,7 @@ function App() {
             }
           </div>
         </div>
-        <div className='col-span-1 bg-lime-100'>
+        <div className='lg:col-span-1 bg-lime-100'>
           <Details
             times={times}
           ></Details>
