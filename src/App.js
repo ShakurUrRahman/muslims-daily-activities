@@ -1,7 +1,7 @@
-import logo from './logo.svg';
 import './App.css';
 import { useEffect, useState } from 'react';
 import Activity from './components/Activity/Activity';
+import Details from './components/Details/Details';
 
 function App() {
   return (
@@ -12,7 +12,7 @@ function App() {
 
   function LoadActivities() {
     const [activities, setActivities] = useState([]);
-    const [time, setTime] = useState([])
+    const [times, setTimes] = useState([])
 
     useEffect(() => {
       fetch('activities.json')
@@ -20,8 +20,11 @@ function App() {
         .then(data => setActivities(data))
     }, [])
 
-
-
+    const handleAddToList = (activity) => {
+      console.log(activity);
+      const newTimes = [...times, activity];
+      setTimes(newTimes);
+    }
 
     return (
       <div className='grid lg:grid-cols-4'>
@@ -33,12 +36,15 @@ function App() {
               activities.map(activity => <Activity
                 key={activity.id}
                 activity={activity}
+                handleAddToList={handleAddToList}
               ></Activity>)
             }
           </div>
         </div>
-        <div className='col-span-1'>
-          <h1>Details</h1>
+        <div className='col-span-1 bg-lime-100'>
+          <Details
+            times={times}
+          ></Details>
         </div>
       </div>
     )
