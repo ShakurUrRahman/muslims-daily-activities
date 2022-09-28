@@ -1,0 +1,38 @@
+[
+    {
+        "id": "1",
+        "picture": "https://media.istockphoto.com/vectors/muslim-man-doing-ablution-boy-take-water-to-washing-hand-cartoon-flat-vector-id1208118434?k=20&m=1208118434&s=612x612&w=0&h=ldp20bZiZQzggaIWBhZEZJKly6MwkUvXxyrWqCLXGhM=",
+        "name": "Wudu",
+        "time": "15"
+    },
+    {
+        "id": "2",
+        "picture": "https://media.istockphoto.com/vectors/man-praying-on-knees-communicating-with-god-with-eyes-closed-vector-id953738536?k=20&m=953738536&s=612x612&w=0&h=N9pTI0pBwEVsAGgavBiAZzO18HrXfQvOMtby_TOnSGA=",
+        "name": "Salat",
+        "time": "57"
+    },
+    {
+        "id": "3",
+        "picture": "https://static.vecteezy.com/system/resources/previews/006/217/919/original/muslim-boy-or-child-reading-recitation-holy-quran-when-ramadan-month-positive-activity-free-vector.jpg",
+        "name": "Reciting Qur'an",
+        "time": "15"
+    },
+    {
+        "id": "4",
+        "picture": "https://thumbs.dreamstime.com/b/muslim-girl-reading-book-muslim-girl-reading-book-illustration-190694978.jpg",
+        "name": "Knowing and Learning",
+        "time": "15"
+    },
+    {
+        "id": "5",
+        "picture": "https://thumbs.dreamstime.com/b/nature-scene-background-muslim-boy-girl-running-garden-nature-scene-background-muslim-boy-girl-running-174730640.jpg",
+        "name": "Exercise and Eating Right Food",
+        "time": "90"
+    },
+    {
+        "id": "6",
+        "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcFxESf6JJv_pg8zWcpcYYVqcWbxe1iNVokCq5bX6F3BIFKukmURp5hoUJoIC8P2v0DNo&usqp=CAU",
+        "name": "Paying Charity",
+        "company": "3"
+    }
+]
