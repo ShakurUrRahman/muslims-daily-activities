@@ -14,9 +14,8 @@ const Answers = () => {
             </div>
             <div className='lg:p-5 m-5  lg:text-2xl'>
                 <h4 className='mb-2 font-bold text-green-900'>Q3. Without data loading What is the uses of useEffect?</h4>
-                <h4 className='mb-5'>A3. State is the local state of the component which cannot be accessed and modified outside of the component. It's equivalent to local variables in a function. Props, on the other hand, make components reusable by giving components the ability to receive data from their parent component in the form of props.</h4>
+                <h4 className='mb-5'>A3. The UseEffects run after every completed render, but you can choose to fire them only when certain values have changed. This hook uses an array of "dependencies": variables or states that useEffect listen to for changes. When their values change, the main body of the useEffect hook is executed.</h4>
             </div>
-
         </div>
     )
 };
