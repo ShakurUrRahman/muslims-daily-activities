@@ -67,7 +67,7 @@ const Details = (props) => {
 
             <div className='mb-3'>
                 <h1 className='font-bold text-2xl font-serif text-amber-900'>Add A Break</h1>
-                <div className='border-4 border-indigo-200 border-l-indigo-500 mt-5 p-2 flex gap-2 bg-green-300  rounded-lg'>
+                <div className='border-4 border-indigo-200 border-l-indigo-500 mt-5 lg:p-2 p-3 flex lg:gap-1 gap-2 bg-green-300  rounded-lg'>
                     <button onClick={() => setBreakTime(10)} className='btn btn-success hover:bg-green-500 border-1 border-indigo-200 border-l-indigo-500'>10</button>
                     <button onClick={() => setBreakTime(20)} className='btn btn-success hover:bg-green-500 border-1 border-indigo-200 border-l-indigo-500'>20</button>
                     <button onClick={() => setBreakTime(30)} className='btn btn-success hover:bg-green-500 border-1 border-indigo-200 border-l-indigo-500'>30</button>
@@ -76,10 +76,10 @@ const Details = (props) => {
             </div>
 
             <h1 className='mt-5 font-bold text-2xl font-serif text-amber-900'>Activity Details</h1>
-            <div className='bg-green-300 p-2 rounded-lg border-4 border-indigo-200 border-l-indigo-500 my-4'>
+            <div className='bg-green-300 p-1 rounded-lg border-4 border-indigo-200 border-l-indigo-500 my-4'>
                 <h1 className='font-bold text-center text-lg '>Activity Time <span className='text-green-700 font-extrabold text-2xl'>{totalTimes}</span> minutes</h1>
             </div>
-            <div className='bg-green-300 p-3 my-2 rounded-lg border-4 border-indigo-200 border-l-indigo-500'>
+            <div className='bg-green-300 p-2 my-2 rounded-lg border-4 border-indigo-200 border-l-indigo-500'>
                 <h1 className='font-bold text-center text-lg'>Break Time <span className='text-green-700 font-extrabold text-2xl'>{result}</span> minutes</h1>
             </div>
             <div>
