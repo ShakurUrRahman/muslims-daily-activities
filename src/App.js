@@ -2,6 +2,7 @@ import './App.css';
 import { useEffect, useState } from 'react';
 import Activity from './components/Activity/Activity';
 import Details from './components/Details/Details';
+import Answers from './components/Answers/Answers';
 
 function App() {
   return (
@@ -27,24 +28,29 @@ function App() {
     }
 
     return (
-      <div className='grid lg:grid-cols-4'>
-        <div className='col-span-3 ml-28 my-20'>
-          <h1 className='text-3xl font-bold text-green-800 mb-3'>Muslims Daily Activities</h1>
-          <h1 className='text-2xl font-bold text-green-500 mb-5'>Select your activities</h1>
-          <div className='grid lg:grid-cols-3 gap-2'>
-            {
-              activities.map(activity => <Activity
-                key={activity.id}
-                activity={activity}
-                handleAddToList={handleAddToList}
-              ></Activity>)
-            }
+      <div>
+        <div className='grid lg:grid-cols-4 '>
+          <div className='col-span-3 my-20 ml-28'>
+            <h1 className='text-3xl font-bold text-green-800 mb-3'>Muslims Daily Activities</h1>
+            <h1 className='text-2xl font-bold text-green-500 mb-5'>Select your activities</h1>
+            <div className='grid lg:grid-cols-3 gap-2'>
+              {
+                activities.map(activity => <Activity
+                  key={activity.id}
+                  activity={activity}
+                  handleAddToList={handleAddToList}
+                ></Activity>)
+              }
+            </div>
+          </div>
+          <div className='col-span-1  details'>
+            <Details
+              times={times}
+            ></Details>
           </div>
         </div>
-        <div className='lg:col-span-1 bg-lime-100'>
-          <Details
-            times={times}
-          ></Details>
+        <div>
+          <Answers></Answers>
         </div>
       </div>
     )

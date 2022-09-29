@@ -10,33 +10,22 @@ const Details = (props) => {
         totalTimes = totalTimes + time.time;
     }
 
-    const [ten, setTen] = useState(0);
-    const [twenty, setTwenty] = useState(0);
-    const [thirty, setThirty] = useState(0);
-    const [forty, setForty] = useState(0);
+    let [breaks, setBreaks] = useState(0);
 
-    const clickTen = () => {
-        const showTen = ten + 10;
-        setTen(showTen);
+    const setBreakTime = (time) => {
+        setBreaks(time)
+        console.log(time);
+
+        localStorage.setItem('break-time', time)
     }
-    const clickTwenty = () => {
-        const showTwenty = twenty + 20;
-        setTwenty(showTwenty);
-    }
-    const clickThirty = () => {
-        const showThirty = thirty + 30;
-        setThirty(showThirty);
-    }
-    const clickForty = () => {
-        const showForty = forty + 40;
-        setForty(showForty);
-    }
+
+
 
     return (
-        <div className='lg:sticky lg:top-0 p-10'>
+        <div className='lg:sticky lg:top-0 p-8 border-4 border-indigo-200 border-l-indigo-500 bg-lime-100'>
             <div className='flex items-center justify-between mx-2 mb-3'>
                 <div>
-                    <img className='w-10 h-9 rounded-full' src='https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Shaqi_jrvej.jpg/1200px-Shaqi_jrvej.jpg' alt="" srcset="" />
+                    <img className='w-10 h-9 rounded-full' src='https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Shaqi_jrvej.jpg/1200px-Shaqi_jrvej.jpg' alt="" />
                 </div>
                 <div className='font-serif font-bold text-amber-900'>
                     <h1>Shakurur Rahman</h1>
@@ -66,10 +55,10 @@ const Details = (props) => {
             <div className=''>
                 <h1 className='font-bold text-2xl from-neutral-focus'>Add A Break</h1>
                 <div className='my-5'>
-                    <button onClick={clickTen} className='btn btn-warning mr-2'>10</button>
-                    <button onClick={clickTwenty} className='btn btn-warning mr-2'>20</button>
-                    <button onClick={clickThirty} className='btn btn-warning mr-2'>30</button>
-                    <button onClick={clickForty} className='btn btn-warning mr-2'>40</button>
+                    <button onClick={() => setBreakTime(10)} className='btn btn-warning mr-2'>10</button>
+                    <button onClick={() => setBreakTime(20)} className='btn btn-warning mr-2'>20</button>
+                    <button onClick={() => setBreakTime(30)} className='btn btn-warning mr-2'>30</button>
+                    <button onClick={() => setBreakTime(40)} className='btn btn-warning mr-2'>40</button>
                 </div>
             </div>
 
@@ -78,10 +67,9 @@ const Details = (props) => {
                 <h1>Activity Time {totalTimes}</h1>
             </div>
             <div className='bg-green-300 p-3 my-2'>
-                <h1>Break Time {ten || twenty || thirty || forty}</h1>
+                <h1>Break Time {breaks}</h1>
             </div>
         </div>
-    );
-};
-
+    )
+}
 export default Details;
