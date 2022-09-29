@@ -1,25 +1,43 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import './Details.css'
 
 const Details = (props) => {
     const { times } = props;
     console.log(times);
 
     let totalTimes = 0;
-
     for (const time of times) {
         totalTimes = totalTimes + time.time;
     }
 
+    // Setting break time
     let [breaks, setBreaks] = useState(0);
 
     const setBreakTime = (time) => {
         setBreaks(time)
-        console.log(time);
-
         localStorage.setItem('break-time', time)
     }
 
+    const storedBreakTime = () => {
+        const storedTime = localStorage.getItem('break-time');
+        return storedTime;
+    }
 
+    const result = storedBreakTime();
+    // useEffect(() => {
+    //     const storedTime = localStorage.getItem('break-time');
+    //     console.log(storedTime);
+    // }, [breaks])
+
+
+
+    const myToast = () => {
+        toast.success("You have completed your daily activities!", {
+            position: "top-center"
+        });
+    }
 
     return (
         <div className='lg:sticky lg:top-0 p-8 border-4 border-indigo-200 border-l-indigo-500 bg-lime-100'>
@@ -67,7 +85,11 @@ const Details = (props) => {
                 <h1>Activity Time {totalTimes}</h1>
             </div>
             <div className='bg-green-300 p-3 my-2'>
-                <h1>Break Time {breaks}</h1>
+                <h1>Break Time {result} minutes</h1>
+            </div>
+            <div>
+                <button onClick={myToast} className='btn btn-warning mx-8 my-3'>Activity Completed</button>
+                <ToastContainer />
             </div>
         </div>
     )
