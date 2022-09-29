@@ -73,10 +73,10 @@ const Details = (props) => {
             <div className=''>
                 <h1 className='font-bold text-2xl from-neutral-focus'>Add A Break</h1>
                 <div className='my-5'>
-                    <button onClick={() => setBreakTime(10)} className='btn btn-warning mr-2'>10</button>
-                    <button onClick={() => setBreakTime(20)} className='btn btn-warning mr-2'>20</button>
-                    <button onClick={() => setBreakTime(30)} className='btn btn-warning mr-2'>30</button>
-                    <button onClick={() => setBreakTime(40)} className='btn btn-warning mr-2'>40</button>
+                    <button onClick={() => setBreakTime(10)} className='btn btn-warning mr-3'>10</button>
+                    <button onClick={() => setBreakTime(20)} className='btn btn-warning mr-3'>20</button>
+                    <button onClick={() => setBreakTime(30)} className='btn btn-warning mr-3'>30</button>
+                    <button onClick={() => setBreakTime(40)} className='btn btn-warning'>40</button>
                 </div>
             </div>
 

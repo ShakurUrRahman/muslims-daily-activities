@@ -1,4 +1,5 @@
 import React from 'react';
+import './Activity.css'
 
 const Activity = (props) => {
     const { handleAddToList, activity } = props
@@ -6,7 +7,7 @@ const Activity = (props) => {
 
 
     return (
-        <div className="card w-64 bg-base-100 shadow-xl">
+        <div className="card w-64 bg-base-100 shadow-xl activity-card">
             <figure className="px-4 pt-5">
                 <img src={picture} alt="Shoes" className="rounded-xl h-52 w-96" />
             </figure>
