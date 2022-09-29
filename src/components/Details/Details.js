@@ -35,7 +35,7 @@ const Details = (props) => {
     }
 
     return (
-        <div className='lg:sticky lg:top-0 lg:p-8 lg:mx-0 mx-8 lg:mt-0 mt-5 px-8 py-5 border-4 border-indigo-200 border-l-indigo-500 bg-lime-100'>
+        <div className='lg:sticky lg:top-0 lg:p-8 lg:mt-0 mt-5 px-8 py-5 border-4 border-indigo-200 border-l-indigo-500 bg-lime-100'>
             <div className='flex items-center justify-between mx-2 mb-3'>
                 <div>
                     <img className='w-10 h-9 rounded-full' src='https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Shaqi_jrvej.jpg/1200px-Shaqi_jrvej.jpg' alt="" />
