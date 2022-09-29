@@ -26,21 +26,16 @@ const Details = (props) => {
     }
 
     const result = storedBreakTime();
-    // useEffect(() => {
-    //     const storedTime = localStorage.getItem('break-time');
-    //     console.log(storedTime);
-    // }, [breaks])
 
-
-
+    // Toast
     const myToast = () => {
-        toast.success("You have completed your daily activities!", {
+        toast.success("Alhumdulillah, You have completed your daily activities!", {
             position: "top-center"
         });
     }
 
     return (
-        <div className='lg:sticky lg:top-0 lg:p-8 lg:mx-0 m-6 p-5 border-4 border-indigo-200 border-l-indigo-500 bg-lime-100'>
+        <div className='lg:sticky lg:top-0 lg:p-8 lg:mx-0 mx-8 lg:mt-0 mt-5 px-8 py-5 border-4 border-indigo-200 border-l-indigo-500 bg-lime-100'>
             <div className='flex items-center justify-between mx-2 mb-3'>
                 <div>
                     <img className='w-10 h-9 rounded-full' src='https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Shaqi_jrvej.jpg/1200px-Shaqi_jrvej.jpg' alt="" />
@@ -51,7 +46,7 @@ const Details = (props) => {
                 </div>
             </div>
 
-            <div className='flex font-bold items-center justify-between my-8 bg-green-300 p-5 rounded-lg'>
+            <div className='border-4 border-indigo-200 border-l-indigo-500 flex font-bold items-center justify-between my-8 bg-green-300 p-3 rounded-lg'>
                 <div>
                     <h1 className='text-3xl text-green-900'>55<span className='text-green-600 text-base font-normal'>kg</span></h1>
                     <h1 className='text-green-600 font-normal'>Weight</h1>
@@ -70,25 +65,25 @@ const Details = (props) => {
                 </div>
             </div>
 
-            <div className=''>
-                <h1 className='font-bold text-2xl from-neutral-focus'>Add A Break</h1>
-                <div className='my-5'>
-                    <button onClick={() => setBreakTime(10)} className='btn btn-warning lg:mr-3 mr-2'>10</button>
-                    <button onClick={() => setBreakTime(20)} className='btn btn-warning lg:mr-3 mr-2'>20</button>
-                    <button onClick={() => setBreakTime(30)} className='btn btn-warning lg:mr-3 mr-2'>30</button>
-                    <button onClick={() => setBreakTime(40)} className='btn btn-warning'>40</button>
+            <div className='mb-3'>
+                <h1 className='font-bold text-2xl font-serif text-amber-900'>Add A Break</h1>
+                <div className='border-4 border-indigo-200 border-l-indigo-500 mt-5 p-2 flex gap-2 bg-green-300  rounded-lg'>
+                    <button onClick={() => setBreakTime(10)} className='btn btn-success hover:bg-green-500 border-1 border-indigo-200 border-l-indigo-500'>10</button>
+                    <button onClick={() => setBreakTime(20)} className='btn btn-success hover:bg-green-500 border-1 border-indigo-200 border-l-indigo-500'>20</button>
+                    <button onClick={() => setBreakTime(30)} className='btn btn-success hover:bg-green-500 border-1 border-indigo-200 border-l-indigo-500'>30</button>
+                    <button onClick={() => setBreakTime(40)} className='btn btn-success hover:bg-green-500 border-1 border-indigo-200 border-l-indigo-500'>40</button>
                 </div>
             </div>
 
-            <h1 className='my-3'>Activity Details</h1>
-            <div className='bg-green-300 p-3'>
-                <h1>Activity Time {totalTimes}</h1>
+            <h1 className='mt-5 font-bold text-2xl font-serif text-amber-900'>Activity Details</h1>
+            <div className='bg-green-300 p-2 rounded-lg border-4 border-indigo-200 border-l-indigo-500 my-4'>
+                <h1 className='font-bold text-center text-lg '>Activity Time <span className='text-green-700 font-extrabold text-2xl'>{totalTimes}</span> minutes</h1>
             </div>
-            <div className='bg-green-300 p-3 my-2'>
-                <h1>Break Time {result} minutes</h1>
+            <div className='bg-green-300 p-3 my-2 rounded-lg border-4 border-indigo-200 border-l-indigo-500'>
+                <h1 className='font-bold text-center text-lg'>Break Time <span className='text-green-700 font-extrabold text-2xl'>{result}</span> minutes</h1>
             </div>
             <div>
-                <button onClick={myToast} className='btn btn-warning lg:mx-8 mx-4 my-3'>Activity Completed</button>
+                <button onClick={myToast} className='btn btn-success lg:mx-6 mx-12 my-3 font-bold hover:bg-green-500 border-4 border-indigo-200 border-l-indigo-500'>Activity Completed</button>
                 <ToastContainer />
             </div>
         </div>

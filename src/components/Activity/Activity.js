@@ -7,15 +7,15 @@ const Activity = (props) => {
 
 
     return (
-        <div className="card w-64 bg-base-100 shadow-xl">
+        <div className="card w-64 shadow-xl bg-green-300 border-4 border-indigo-200 border-l-indigo-500">
             <figure className="px-4 pt-5">
                 <img src={picture} alt="Shoes" className="rounded-xl h-52 w-96" />
             </figure>
             <div className="card-body items-center text-center">
-                <h2 className="card-title">{name}</h2>
-                <p>Estimated Time: {time} minutes</p>
-                <div className="card-actions">
-                    <button onClick={() => handleAddToList(activity)} className="btn btn-primary">Add to list</button>
+                <h2 className="card-title font-bold">{name}</h2>
+                <p>Estimated Time: <span className='font-bold text-amber-900'>{time}</span> minutes</p>
+                <div className="card-actions mt-2">
+                    <button onClick={() => handleAddToList(activity)} className="btn btn-success border-4 border-indigo-200 border-l-indigo-500 hover:bg-green-500">Add to list</button>
                 </div>
             </div>
         </div>
