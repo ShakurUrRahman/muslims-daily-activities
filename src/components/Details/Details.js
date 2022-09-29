@@ -40,7 +40,7 @@ const Details = (props) => {
     }
 
     return (
-        <div className='lg:sticky lg:top-0 p-8 border-4 border-indigo-200 border-l-indigo-500 bg-lime-100'>
+        <div className='lg:sticky lg:top-0 lg:p-8 lg:mx-0 m-6 p-5 border-4 border-indigo-200 border-l-indigo-500 bg-lime-100'>
             <div className='flex items-center justify-between mx-2 mb-3'>
                 <div>
                     <img className='w-10 h-9 rounded-full' src='https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Shaqi_jrvej.jpg/1200px-Shaqi_jrvej.jpg' alt="" />
@@ -73,9 +73,9 @@ const Details = (props) => {
             <div className=''>
                 <h1 className='font-bold text-2xl from-neutral-focus'>Add A Break</h1>
                 <div className='my-5'>
-                    <button onClick={() => setBreakTime(10)} className='btn btn-warning mr-3'>10</button>
-                    <button onClick={() => setBreakTime(20)} className='btn btn-warning mr-3'>20</button>
-                    <button onClick={() => setBreakTime(30)} className='btn btn-warning mr-3'>30</button>
+                    <button onClick={() => setBreakTime(10)} className='btn btn-warning lg:mr-3 mr-2'>10</button>
+                    <button onClick={() => setBreakTime(20)} className='btn btn-warning lg:mr-3 mr-2'>20</button>
+                    <button onClick={() => setBreakTime(30)} className='btn btn-warning lg:mr-3 mr-2'>30</button>
                     <button onClick={() => setBreakTime(40)} className='btn btn-warning'>40</button>
                 </div>
             </div>
@@ -88,7 +88,7 @@ const Details = (props) => {
                 <h1>Break Time {result} minutes</h1>
             </div>
             <div>
-                <button onClick={myToast} className='btn btn-warning mx-8 my-3'>Activity Completed</button>
+                <button onClick={myToast} className='btn btn-warning lg:mx-8 mx-4 my-3'>Activity Completed</button>
                 <ToastContainer />
             </div>
         </div>
