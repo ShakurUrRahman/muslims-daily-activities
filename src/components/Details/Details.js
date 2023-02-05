@@ -12,20 +12,23 @@ const Details = (props) => {
         totalTimes = totalTimes + time.time;
     }
 
-    // Setting break time
-    let [breaks, setBreaks] = useState(0);
+    const [items, setItems] = useState(0);
 
-    const setBreakTime = (time) => {
-        setBreaks(time)
-        localStorage.setItem('break-time', time)
+    const setIBreakTime = (t) => {
+        localStorage.setItem('items', t);
+        console.log(items);
+        setItems(t);
     }
 
-    const storedBreakTime = () => {
-        const storedTime = localStorage.getItem('break-time');
-        return storedTime;
-    }
+    useEffect(() => {
+        const items = localStorage.getItem('items');
+        if (items) {
+            setItems(items);
+        }
+    }, []);
 
-    const result = storedBreakTime();
+
+
 
     // Toast
     const myToast = () => {
@@ -68,10 +71,10 @@ const Details = (props) => {
             <div className='mb-3'>
                 <h1 className='font-bold text-2xl font-serif text-amber-900'>Add A Break</h1>
                 <div className='border-4 border-indigo-200 border-l-indigo-500 mt-5 lg:p-2 p-3 flex lg:gap-1 gap-2 bg-green-300  rounded-lg'>
-                    <button onClick={() => setBreakTime(10)} className='btn btn-success hover:bg-green-500 border-1 border-indigo-200 border-l-indigo-500'>10</button>
-                    <button onClick={() => setBreakTime(20)} className='btn btn-success hover:bg-green-500 border-1 border-indigo-200 border-l-indigo-500'>20</button>
-                    <button onClick={() => setBreakTime(30)} className='btn btn-success hover:bg-green-500 border-1 border-indigo-200 border-l-indigo-500'>30</button>
-                    <button onClick={() => setBreakTime(40)} className='btn btn-success hover:bg-green-500 border-1 border-indigo-200 border-l-indigo-500'>40</button>
+                    <button onClick={() => setIBreakTime(10)} className='btn btn-success hover:bg-green-500 border-1 border-indigo-200 border-l-indigo-500'>10</button>
+                    <button onClick={() => setIBreakTime(20)} className='btn btn-success hover:bg-green-500 border-1 border-indigo-200 border-l-indigo-500'>20</button>
+                    <button onClick={() => setIBreakTime(30)} className='btn btn-success hover:bg-green-500 border-1 border-indigo-200 border-l-indigo-500'>30</button>
+                    <button onClick={() => setIBreakTime(40)} className='btn btn-success hover:bg-green-500 border-1 border-indigo-200 border-l-indigo-500'>40</button>
                 </div>
             </div>
 
@@ -80,7 +83,7 @@ const Details = (props) => {
                 <h1 className='font-bold text-center text-lg '>Activity Time <span className='text-green-700 font-extrabold text-2xl'>{totalTimes}</span> minutes</h1>
             </div>
             <div className='bg-green-300 p-2 my-2 rounded-lg border-4 border-indigo-200 border-l-indigo-500'>
-                <h1 className='font-bold text-center text-lg'>Break Time <span className='text-green-700 font-extrabold text-2xl'>{result}</span> minutes</h1>
+                <h1 className='font-bold text-center text-lg'>Break Time <span className='text-green-700 font-extrabold text-2xl'>{items}</span> minutes</h1>
             </div>
             <div>
                 <button onClick={myToast} className='btn btn-success lg:mx-6 mx-12 my-3 font-bold hover:bg-green-500 border-4 border-indigo-200 border-l-indigo-500'>Activity Completed</button>
